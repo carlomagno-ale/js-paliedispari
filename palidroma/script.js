@@ -32,13 +32,14 @@ if (userWord === inverseWord){
 // creare la funzione per leggere al contrario
 
 
-const userWord = prompt('Inserici una parola palidroma [es. osso, oro, afa, radar ...]');
+let userWord = prompt('Inserici una parola palidroma [es. osso, oro, afa, radar ...]');
 
 function isPalidroma(word){
 
-    const inverseWord = word.toLowerCase().split('').reverse().join('');  
+    const lowerWord = word.toLowerCase();
+    const inverseWord = word.split('').reverse().join('').toLowerCase();
 
-    if(word === inverseWord) {
+    if(lowerWord === inverseWord) {
         return true
     } 
 
