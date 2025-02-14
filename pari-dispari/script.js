@@ -2,35 +2,32 @@
 L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
 */
 
-// utente sceglie pari/dispari
-// utente inserisce un numero da 1 a 5
-// PC inserisce un numero randomico da 1 a 5
-// sommiamo i due numeri e stabiliamo se è pari o dispari
-// dichiaro vincitore
+const userChoice = prompt('Scegli pari o dispari');
+alert(`Hai scelto ${userChoice}`);
 
-/*
-es in classe
+const userNumber = Number(prompt('Scegli un numero da 1 a 5'));
+alert(`Hai scelto ${userNumber}`);
 
-function isEvenNumber(numb) {
+const machineNumber = Math.floor(Math.random() * 5) + 1;
+alert(`L'avversario ha scelto ${machineNumber}`);
 
-    if (numb % 2 === 0) {
+function isEvenNumber(userNumb, machineNumb) {
+    const sum = userNumb + machineNumb;
+    const isEven = sum % 2 === 0;
+
+    if (isEven) {
         return true
     } 
 
     return false
 }
 
-isEvenNumber(userNumber)
+isEvenNumber(userNumber, machineNumber)
 
-if(isEvenNumber(userNumber)){
-    console.log('pari')
+if (isEvenNumber(userNumber, machineNumber) === true && userChoice === 'pari') {
+    alert('Hai vinto!')
+} else if (isEvenNumber(userNumber, machineNumber) === false && userChoice === 'dispari'){
+    alert('Hai vinto!')
 } else {
-    console.log('dispari')
+    alert('Hai perso')
 }
-
-*/
-
-const userChoice = prompt('Scegli pari o dispari');
-alert(`Hai scelto ${userChoice}`);
-
-//const userNumber = Number(prompt('Scegli un numero da 1 a 5'))
