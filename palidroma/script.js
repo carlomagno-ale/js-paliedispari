@@ -1,11 +1,12 @@
 /*Palidroma
 Chiedere all’utente di inserire una parola Creare una funzione per capire se la parola inserita è palindroma*/
 
+/*
 //utente inserisce la parola
 
 const userWord = prompt('Inserici una parola palidroma [es. osso, oro, afa, radar ...]');
 
-//dividiamo la parola in lettere
+//dividiamo la parola in lettere 
 
 let singleLetters = userWord.toLowerCase.split('');
 console.log(singleLetters);
@@ -26,7 +27,29 @@ if (userWord === inverseWord){
 } else {
     console.log('no')
 }
-
+*/
 
 // creare la funzione per leggere al contrario
+
+
+const userWord = prompt('Inserici una parola palidroma [es. osso, oro, afa, radar ...]');
+
+function isPalidroma(word){
+
+    const inverseWord = word.toLowerCase().split('').reverse().join('');  
+
+    if(word === inverseWord) {
+        return true
+    } 
+
+    return false
+  }
+
+if (isPalidroma(userWord)){
+    console.log(`${userWord} è una parola palidroma`)
+} else {
+    console.log(`${userWord} NON è una parola palidroma`)
+}
+
+
 
